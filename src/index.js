@@ -7,6 +7,7 @@ const mqttClient = mqtt.newMQTTClient(cfg.mqtt.broker, cfg.mqtt.topic.in, cfg.mq
 const userServiceClient = userService.newUserService(cfg.client.user.base)
 
 mqttClient.start((correlationId, clientId, userId) => {
+    log.info("Start decision", {correlationId, clientId, userId})
     mqttClient.sendInfoStatus(202, 'Start decision.', cfg.buildStatusTopic(clientId, correlationId))
 
     userServiceClient.getUserChannels(clientId, userId, correlationId)
