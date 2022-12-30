@@ -14,7 +14,7 @@
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.1",
     "assert": "^2.0.0",
-    "mocha": "^6.2.0",
+    "mocha": "^10.2.0",
     "nodemon": "^1.19.1",
     "nyc": "^15.0.0",
     "shebang-loader": "0.0.1",
